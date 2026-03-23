@@ -12,5 +12,83 @@ CHIP Mux16 {
     OUT out[16];
 
     PARTS:
-    //// Replace this comment with your code.
+    Not(in= sel, out= notSel0);
+    And(a= a[0], b= notSel0, out= andAOut0);
+    And(a= b[0], b= sel, out= andBOut0);
+    Or(a= andAOut0, b= andBOut0, out= out[0]);
+
+    Not(in= sel, out= notSel1);
+    And(a= a[1], b= notSel1, out= andAOut1);
+    And(a= b[1], b= sel, out= andBOut1);
+    Or(a= andAOut1, b= andBOut1, out= out[1]);
+
+    Not(in= sel, out= notSel2);
+    And(a= a[2], b= notSel2, out= andAOut2);
+    And(a= b[2], b= sel, out= andBOut2);
+    Or(a= andAOut2, b= andBOut2, out= out[2]);
+
+    Not(in= sel, out= notSel3);
+    And(a= a[3], b= notSel3, out= andAOut3);
+    And(a= b[3], b= sel, out= andBOut3);
+    Or(a= andAOut3, b= andBOut3, out= out[3]);
+
+    Not(in= sel, out= notSel4);
+    And(a= a[4], b= notSel4, out= andAOut4);
+    And(a= b[4], b= sel, out= andBOut4);
+    Or(a= andAOut4, b= andBOut4, out= out[4]);
+    
+    Not(in= sel, out= notSel5);
+    And(a= a[5], b= notSel5, out= andAOut5);
+    And(a= b[5], b= sel, out= andBOut5);
+    Or(a= andAOut5, b= andBOut5, out= out[5]);
+
+    Not(in= sel, out= notSel6);
+    And(a= a[6], b= notSel6, out= andAOut6);
+    And(a= b[6], b= sel, out= andBOut6);
+    Or(a= andAOut6, b= andBOut6, out= out[6]);    
+    
+    Not(in= sel, out= notSel7);
+    And(a= a[7], b= notSel7, out= andAOut7);
+    And(a= b[7], b= sel, out= andBOut7);
+    Or(a= andAOut7, b= andBOut7, out= out[7]);
+
+    Not(in= sel, out= notSel8);
+    And(a= a[8], b= notSel8, out= andAOut8);
+    And(a= b[8], b= sel, out= andBOut8);
+    Or(a= andAOut8, b= andBOut8, out= out[8]);
+
+    Not(in= sel, out= notSel9);
+    And(a= a[9], b= notSel9, out= andAOut9);
+    And(a= b[9], b= sel, out= andBOut9);
+    Or(a= andAOut9, b= andBOut9, out= out[9]);
+
+    Not(in= sel, out= notSel10);
+    And(a= a[10], b= notSel10, out= andAOut10);
+    And(a= b[10], b= sel, out= andBOut10);
+    Or(a= andAOut10, b= andBOut10, out= out[10]);
+
+    Not(in= sel, out= notSel11);
+    And(a= a[11], b= notSel11, out= andAOut11);
+    And(a= b[11], b= sel, out= andBOut11);
+    Or(a= andAOut11, b= andBOut11, out= out[11]);
+
+    Not(in= sel, out= notSel12);
+    And(a= a[12], b= notSel12, out= andAOut12);
+    And(a= b[12], b= sel, out= andBOut12);
+    Or(a= andAOut12, b= andBOut12, out= out[12]);
+
+    Not(in= sel, out= notSel13);
+    And(a= a[13], b= notSel13, out= andAOut13);
+    And(a= b[13], b= sel, out= andBOut13);
+    Or(a= andAOut13, b= andBOut13, out= out[13]);
+    
+    Not(in= sel, out= notSel14);
+    And(a= a[14], b= notSel14, out= andAOut14);
+    And(a= b[14], b= sel, out= andBOut14);
+    Or(a= andAOut14, b= andBOut14, out= out[14]);
+
+    Not(in= sel, out= notSel15);
+    And(a= a[15], b= notSel15, out= andAOut15);
+    And(a= b[15], b= sel, out= andBOut15);
+    Or(a= andAOut15, b= andBOut15, out= out[15]);     
 }
