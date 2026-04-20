@@ -42,17 +42,10 @@ CHIP ALU {
 
     PARTS:
     Not16(in= x, out= notX);
-    Inc16(in= notX, out= negX);
-    Add16(a= negX, b= x, out= zeroX);
-    Not16(in= zeroX, out= notZeroX);
-
     Not16(in= y, out= notY);
-    Inc16(in= notY, out= negY);
-    Add16(a= negY, b= y, out= zeroY);
-    Not16(in= zeroY, out= notZeroY);
 
-    Mux4Way16(a= x, b= notX, c= zeroX, d= notZeroX, sel[0]= nx, sel[1]= zx, out= outX);
-    Mux4Way16(a= y, b= notY, c= zeroY, d= notZeroY, sel[0]= ny, sel[1]= zy, out= outY);
+    Mux4Way16(a= x, b= notX, c= false, d= true, sel[0]= nx, sel[1]= zx, out= outX);
+    Mux4Way16(a= y, b= notY, c= false, d= true, sel[0]= ny, sel[1]= zy, out= outY);
 
     Add16(a= outX, b= outY, out= addXY);
     And16(a= outX, b= outY, out= andXY);
